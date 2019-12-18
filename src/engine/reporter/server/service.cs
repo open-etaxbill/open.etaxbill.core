@@ -14,9 +14,9 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.ServiceModel;
 using NpgsqlTypes;
-using OdinSdk.BaseLib.Data.POSTGRESQL;
+using OpenTax.Engine.Library.Data.POSTGRESQL;
 
-namespace OpenETaxBill.Engine.Reporter
+namespace OpenTax.Engine.Reporter
 {
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerSession, IncludeExceptionDetailInFaults = true)]
     public class ReportService : IReportService, IDisposable
@@ -24,48 +24,48 @@ namespace OpenETaxBill.Engine.Reporter
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IReporter m_ireporter = null;
-        private OpenETaxBill.Channel.Interface.IReporter IReporter
+        private OpenTax.Channel.Interface.IReporter m_ireporter = null;
+        private OpenTax.Channel.Interface.IReporter IReporter
         {
             get
             {
                 if (m_ireporter == null)
-                    m_ireporter = new OpenETaxBill.Channel.Interface.IReporter();
+                    m_ireporter = new OpenTax.Channel.Interface.IReporter();
 
                 return m_ireporter;
             }
         }
         
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(IReporter.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(IReporter.Manager);
 
                 return m_appHelper;
             }
         }
 
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper LSQLHelper
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper LSQLHelper
         {
             get
             {
                 if (m_dataHelper == null)
-                    m_dataHelper = new OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper();
+                    m_dataHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper();
                 return m_dataHelper;
             }
         }
 
-        private OpenETaxBill.Engine.Reporter.Engine m_ereporter = null;
-        private OpenETaxBill.Engine.Reporter.Engine EReporter
+        private OpenTax.Engine.Reporter.Engine m_ereporter = null;
+        private OpenTax.Engine.Reporter.Engine EReporter
         {
             get
             {
                 if (m_ereporter == null)
-                    m_ereporter = new OpenETaxBill.Engine.Reporter.Engine();
+                    m_ereporter = new OpenTax.Engine.Reporter.Engine();
 
                 return m_ereporter;
             }

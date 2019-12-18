@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Responsor
+﻿namespace OpenTax.Engine.Responsor
 {
     partial class eTaxResponsor
     {
@@ -32,7 +32,7 @@
             // eTaxResponsor
             // 
             AutoLog = false;
-            ServiceName = "Open-eTaxBill Responsor";
+            ServiceName = "Open-OpenTax Responsor";
 
         }
 

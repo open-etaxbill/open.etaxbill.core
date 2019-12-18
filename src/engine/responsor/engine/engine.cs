@@ -20,56 +20,56 @@ using OdinSdk.eTaxBill.Security.Mime;
 using OdinSdk.eTaxBill.Security.Notice;
 using OdinSdk.BaseLib.Configuration;
 
-namespace OpenETaxBill.Engine.Responsor
+namespace OpenTax.Engine.Responsor
 {
     public class ResponseEngine : IDisposable
     {
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IResponsor m_iResponsor = null;
-        private OpenETaxBill.Channel.Interface.IResponsor IResponsor
+        private OpenTax.Channel.Interface.IResponsor m_iResponsor = null;
+        private OpenTax.Channel.Interface.IResponsor IResponsor
         {
             get
             {
                 if (m_iResponsor == null)
-                    m_iResponsor = new OpenETaxBill.Channel.Interface.IResponsor();
+                    m_iResponsor = new OpenTax.Channel.Interface.IResponsor();
 
                 return m_iResponsor;
             }
         }
         
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(IResponsor.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(IResponsor.Manager);
 
                 return m_appHelper;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UCertHelper m_certHelper = null;
-        public OpenETaxBill.Engine.Library.UCertHelper UCertHelper
+        private OpenTax.Engine.Library.UCertHelper m_certHelper = null;
+        public OpenTax.Engine.Library.UCertHelper UCertHelper
         {
             get
             {
                 if (m_certHelper == null)
-                    m_certHelper = new OpenETaxBill.Engine.Library.UCertHelper(IResponsor.Manager);
+                    m_certHelper = new OpenTax.Engine.Library.UCertHelper(IResponsor.Manager);
 
                 return m_certHelper;
             }
         }
 
-        private OpenETaxBill.Engine.Library.URespHelper m_responsor = null;
-        private OpenETaxBill.Engine.Library.URespHelper Responsor
+        private OpenTax.Engine.Library.URespHelper m_responsor = null;
+        private OpenTax.Engine.Library.URespHelper Responsor
         {
             get
             {
                 if (m_responsor == null)
-                    m_responsor = new OpenETaxBill.Engine.Library.URespHelper(IResponsor.Manager);
+                    m_responsor = new OpenTax.Engine.Library.URespHelper(IResponsor.Manager);
 
                 return m_responsor;
             }

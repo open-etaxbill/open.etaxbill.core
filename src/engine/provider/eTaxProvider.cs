@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ServiceProcess;
 
-namespace OpenETaxBill.Engine.Provider
+namespace OpenTax.Engine.Provider
 {
     public partial class eTaxProvider : ServiceBase
     {
@@ -20,25 +20,25 @@ namespace OpenETaxBill.Engine.Provider
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Engine.Provider.MailListener m_provideWorker = null;
-        private OpenETaxBill.Engine.Provider.MailListener ProvideWorker
+        private OpenTax.Engine.Provider.MailListener m_provideWorker = null;
+        private OpenTax.Engine.Provider.MailListener ProvideWorker
         {
             get
             {
                 if (m_provideWorker == null)
-                    m_provideWorker = new OpenETaxBill.Engine.Provider.MailListener();
+                    m_provideWorker = new OpenTax.Engine.Provider.MailListener();
 
                 return m_provideWorker;
             }
         }
 
-        private OpenETaxBill.Engine.Provider.Host m_provideHoster = null;
-        private OpenETaxBill.Engine.Provider.Host ProvideHoster
+        private OpenTax.Engine.Provider.Host m_provideHoster = null;
+        private OpenTax.Engine.Provider.Host ProvideHoster
         {
             get
             {
                 if (m_provideHoster == null)
-                    m_provideHoster = new OpenETaxBill.Engine.Provider.Host();
+                    m_provideHoster = new OpenTax.Engine.Provider.Host();
 
                 return m_provideHoster;
             }

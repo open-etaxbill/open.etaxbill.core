@@ -15,7 +15,7 @@ using System;
 using System.Data;
 using System.ServiceModel;
 
-namespace OpenETaxBill.Engine.Collector
+namespace OpenTax.Engine.Collector
 {
     [ServiceContract(Name = "ICollectorService", Namespace = "http://www.odinsoftware.co.kr/open/etaxbill/collector/2016/07", SessionMode = SessionMode.Allowed)]
     public interface ICollectorService

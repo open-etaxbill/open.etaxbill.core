@@ -14,7 +14,7 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.Reflection;
 
-namespace OpenETaxBill.Engine.Provider
+namespace OpenTax.Engine.Provider
 {
     public class Engine
     {

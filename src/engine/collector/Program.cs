@@ -17,7 +17,7 @@ using System.Reflection;
 using System.ServiceProcess;
 using System.Threading;
 
-namespace OpenETaxBill.Engine.Collector
+namespace OpenTax.Engine.Collector
 {
     /// <summary>
     /// 

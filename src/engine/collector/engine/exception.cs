@@ -14,7 +14,7 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.Runtime.Serialization;
 
-namespace OpenETaxBill.Engine.Collector
+namespace OpenTax.Engine.Collector
 {
     /// <summary>
     /// 

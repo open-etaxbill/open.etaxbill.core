@@ -16,7 +16,7 @@ using System.Configuration;
 using System.Net.Mail;
 using OdinSdk.BaseLib.Configuration;
 
-namespace OpenETaxBill.Engine.Responsor
+namespace OpenTax.Engine.Responsor
 {
     /// <summary>
     /// 
@@ -42,25 +42,25 @@ namespace OpenETaxBill.Engine.Responsor
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IResponsor m_iresponsor = null;
-        private OpenETaxBill.Channel.Interface.IResponsor IResponsor
+        private OpenTax.Channel.Interface.IResponsor m_iresponsor = null;
+        private OpenTax.Channel.Interface.IResponsor IResponsor
         {
             get
             {
                 if (m_iresponsor == null)
-                    m_iresponsor = new OpenETaxBill.Channel.Interface.IResponsor();
+                    m_iresponsor = new OpenTax.Channel.Interface.IResponsor();
 
                 return m_iresponsor;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(IResponsor.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(IResponsor.Manager);
 
                 return m_appHelper;
             }

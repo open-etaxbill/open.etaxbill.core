@@ -17,7 +17,7 @@ using System.Reflection;
 using System.ServiceProcess;
 using System.Threading;
 
-namespace OpenETaxBill.Engine.Reporter
+namespace OpenTax.Engine.Reporter
 {
     /// <summary>
     /// 

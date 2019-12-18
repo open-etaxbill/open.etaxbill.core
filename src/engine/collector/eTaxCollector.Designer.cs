@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Collector
+﻿namespace OpenTax.Engine.Collector
 {
     partial class eTaxCollector
     {
@@ -32,7 +32,7 @@
             // eTaxCollector
             // 
             AutoLog = false;
-            ServiceName = "Open-eTaxBill Collector";
+            ServiceName = "Open-OpenTax Collector";
 
         }
 

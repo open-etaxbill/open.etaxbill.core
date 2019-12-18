@@ -14,7 +14,7 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.ServiceModel;
 
-namespace OpenETaxBill.Engine.Signer
+namespace OpenTax.Engine.Signer
 {
     [ServiceContract(Name = "ISignerService", Namespace = "http://www.odinsoftware.co.kr/open/etaxbill/signer/2016/07", SessionMode = SessionMode.Allowed)]
     public interface ISignerService

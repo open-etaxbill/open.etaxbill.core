@@ -20,7 +20,7 @@ using System.Threading;
 using System.Web;
 using System.Text.RegularExpressions;
 
-namespace OpenETaxBill.Engine.Responsor
+namespace OpenTax.Engine.Responsor
 {
     //-------------------------------------------------------------------------------------------------------------------------
     // 

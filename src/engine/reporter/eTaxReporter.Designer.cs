@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Reporter
+﻿namespace OpenTax.Engine.Reporter
 {
     partial class eTaxReporter
     {
@@ -32,7 +32,7 @@
             // eTaxReporter
             // 
             AutoLog = false;
-            ServiceName = "Open-eTaxBill Reporter";
+            ServiceName = "Open-OpenTax Reporter";
 
         }
 

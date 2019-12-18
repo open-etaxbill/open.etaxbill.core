@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Reporter
+﻿namespace OpenTax.Engine.Reporter
 {
     partial class eTaxInstaller
     {
@@ -40,8 +40,8 @@
             // eTaxSVI
             // 
             eTaxSVI.Description = "기 발행된 전자세금계산서를 국세청 전산시스템에 전송하는 서비스입니다.";
-            eTaxSVI.DisplayName = "Open-eTaxBill Reporter";
-            eTaxSVI.ServiceName = "Open-eTaxBill Reporter";
+            eTaxSVI.DisplayName = "Open-OpenTax Reporter";
+            eTaxSVI.ServiceName = "Open-OpenTax Reporter";
             // 
             // eTaxInstaller
             // 

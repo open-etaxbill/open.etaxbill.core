@@ -18,7 +18,7 @@ using OdinSdk.FormLib.Extension;
 using System;
 using System.Windows.Forms;
 
-namespace OpenETaxBill.Certifier
+namespace OpenTax.Certifier
 {
     public partial class MainForm : Form
     {

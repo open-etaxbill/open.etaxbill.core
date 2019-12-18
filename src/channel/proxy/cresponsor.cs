@@ -16,10 +16,10 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.Diagnostics;
 using System.ServiceModel;
-using OdinSdk.OdinLib.Configuration;
-using OdinSdk.OdinLib.Queue;
+using OdinSdk.BaseLib.Configuration;
+using OdinSdk.BaseLib.Queue;
 
-namespace OpenETaxBill.Channel
+namespace OpenTax.Channel
 {
     /// <summary>
     /// 
@@ -68,17 +68,17 @@ namespace OpenETaxBill.Channel
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IResponsor m_iresponsor = null;
+        private OpenTax.Channel.Interface.IResponsor m_iresponsor = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.Channel.Interface.IResponsor IResponsor
+        private OpenTax.Channel.Interface.IResponsor IResponsor
         {
             get
             {
                 if (m_iresponsor == null)
-                    m_iresponsor = new OpenETaxBill.Channel.Interface.IResponsor();
+                    m_iresponsor = new OpenTax.Channel.Interface.IResponsor();
 
                 return m_iresponsor;
             }
@@ -132,12 +132,12 @@ namespace OpenETaxBill.Channel
         // 
         //-------------------------------------------------------------------------------------------------------------------------
         private readonly static object SyncChannel = new object();
-        private OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfResponsor.IResponseService> m_wcf_client = null;
+        private OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfResponsor.IResponseService> m_wcf_client = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.WcfResponsor.IResponseService WcfClient
+        private OpenTax.WcfResponsor.IResponseService WcfClient
         {
             get
             {
@@ -158,7 +158,7 @@ namespace OpenETaxBill.Channel
                     {
                         IResponsor.Proxy.SetClientPortSharing(WcfServiceIp);
 
-                        m_wcf_client = new OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfResponsor.IResponseService>(
+                        m_wcf_client = new OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfResponsor.IResponseService>(
                             this.BindingName,
                             IResponsor.Proxy.ProductName,
                             WcfServiceIp,

@@ -18,7 +18,7 @@ using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using OdinSdk.eTaxBill.Security.Signature;
 
-namespace OpenETaxBill.Certifier
+namespace OpenTax.Certifier
 {
     /// <summary>
     /// 

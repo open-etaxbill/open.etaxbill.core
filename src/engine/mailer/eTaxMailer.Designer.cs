@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Mailer
+﻿namespace OpenTax.Engine.Mailer
 {
     partial class eTaxMailer
     {
@@ -32,7 +32,7 @@
             // eTaxReceiver
             // 
             AutoLog = false;
-            ServiceName = "Open-eTaxBill Mailer";
+            ServiceName = "Open-OpenTax Mailer";
 
         }
 

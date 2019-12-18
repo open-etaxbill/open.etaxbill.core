@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Signer
+﻿namespace OpenTax.Engine.Signer
 {
     partial class eTaxInstaller
     {
@@ -40,8 +40,8 @@
             // eTaxSVI
             // 
             this.eTaxSVI.Description = "수집된 매출 데이터를 전자서명하여 전자세금계산서를 생성하는 서비스 입니다.";
-            this.eTaxSVI.DisplayName = "Open-eTaxBill Signer";
-            this.eTaxSVI.ServiceName = "Open-eTaxBill Signer";
+            this.eTaxSVI.DisplayName = "Open-OpenTax Signer";
+            this.eTaxSVI.ServiceName = "Open-OpenTax Signer";
             // 
             // eTaxInstaller
             // 

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Configuration.Install;
 
-namespace OpenETaxBill.Engine.Mailer
+namespace OpenTax.Engine.Mailer
 {
     [RunInstaller(true)]
     public partial class eTaxInstaller : Installer

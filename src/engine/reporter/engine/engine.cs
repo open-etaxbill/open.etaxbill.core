@@ -17,14 +17,14 @@ using System.Text;
 using System.Xml;
 using NpgsqlTypes;
 using OdinSdk.BaseLib.Configuration;
-using OdinSdk.BaseLib.Data.POSTGRESQL;
+using OpenTax.Engine.Library.Data.POSTGRESQL;
 using OdinSdk.eTaxBill.Security.Issue;
 using OdinSdk.eTaxBill.Security.Mime;
 using OdinSdk.eTaxBill.Security.Notice;
-using OpenETaxBill.Channel.Interface;
-using OpenETaxBill.Engine.Library;
+using OpenTax.Channel.Interface;
+using OpenTax.Engine.Library;
 
-namespace OpenETaxBill.Engine.Reporter
+namespace OpenTax.Engine.Reporter
 {
     public class Engine : IDisposable
     {
@@ -36,72 +36,72 @@ namespace OpenETaxBill.Engine.Reporter
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper LSQLHelper
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper LSQLHelper
         {
             get
             {
                 if (m_dataHelper == null)
-                    m_dataHelper = new OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper();
+                    m_dataHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper();
                 return m_dataHelper;
             }
         }
         
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper m_dltaHelper = null;
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper LDltaHelper
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper m_dltaHelper = null;
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper LDltaHelper
         {
             get
             {
                 if (m_dltaHelper == null)
-                    m_dltaHelper = new OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper();
+                    m_dltaHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper();
 
                 return m_dltaHelper;
             }
         }
 
-        private OpenETaxBill.Channel.Interface.IReporter m_ireporter = null;
-        private OpenETaxBill.Channel.Interface.IReporter IReporter
+        private OpenTax.Channel.Interface.IReporter m_ireporter = null;
+        private OpenTax.Channel.Interface.IReporter IReporter
         {
             get
             {
                 if (m_ireporter == null)
-                    m_ireporter = new OpenETaxBill.Channel.Interface.IReporter();
+                    m_ireporter = new OpenTax.Channel.Interface.IReporter();
 
                 return m_ireporter;
             }
         }
         
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(IReporter.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(IReporter.Manager);
 
                 return m_appHelper;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UCertHelper m_certHelper = null;
-        public OpenETaxBill.Engine.Library.UCertHelper UCertHelper
+        private OpenTax.Engine.Library.UCertHelper m_certHelper = null;
+        public OpenTax.Engine.Library.UCertHelper UCertHelper
         {
             get
             {
                 if (m_certHelper == null)
-                    m_certHelper = new OpenETaxBill.Engine.Library.UCertHelper(IReporter.Manager);
+                    m_certHelper = new OpenTax.Engine.Library.UCertHelper(IReporter.Manager);
 
                 return m_certHelper;
             }
         }
 
-        private OpenETaxBill.Engine.Library.URespHelper m_responsor = null;
-        private OpenETaxBill.Engine.Library.URespHelper Responsor
+        private OpenTax.Engine.Library.URespHelper m_responsor = null;
+        private OpenTax.Engine.Library.URespHelper Responsor
         {
             get
             {
                 if (m_responsor == null)
-                    m_responsor = new OpenETaxBill.Engine.Library.URespHelper(IReporter.Manager);
+                    m_responsor = new OpenTax.Engine.Library.URespHelper(IReporter.Manager);
 
                 return m_responsor;
             }

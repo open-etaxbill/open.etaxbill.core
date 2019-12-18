@@ -13,7 +13,7 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 
 using System;
 
-namespace OpenETaxBill.Engine.Reporter
+namespace OpenTax.Engine.Reporter
 {
     public class ReporterException : Exception
     {

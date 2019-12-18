@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Configuration.Install;
 using System.Linq;
 
-namespace OpenETaxBill.Engine.Signer
+namespace OpenTax.Engine.Signer
 {
     [RunInstaller(true)]
     public partial class eTaxInstaller : Installer

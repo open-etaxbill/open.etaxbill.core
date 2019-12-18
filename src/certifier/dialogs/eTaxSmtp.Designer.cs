@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Certifier
+﻿namespace OpenTax.Certifier
 {
     partial class eTaxSmtp
     {

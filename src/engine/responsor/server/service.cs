@@ -14,7 +14,7 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.ServiceModel;
 
-namespace OpenETaxBill.Engine.Responsor
+namespace OpenTax.Engine.Responsor
 {
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerSession, IncludeExceptionDetailInFaults=true)]
     public class ResponseService : IResponseService, IDisposable
@@ -22,13 +22,13 @@ namespace OpenETaxBill.Engine.Responsor
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IResponsor m_iresponsor = null;
-        private OpenETaxBill.Channel.Interface.IResponsor IResponsor
+        private OpenTax.Channel.Interface.IResponsor m_iresponsor = null;
+        private OpenTax.Channel.Interface.IResponsor IResponsor
         {
             get
             {
                 if (m_iresponsor == null)
-                    m_iresponsor = new OpenETaxBill.Channel.Interface.IResponsor();
+                    m_iresponsor = new OpenTax.Channel.Interface.IResponsor();
 
                 return m_iresponsor;
             }

@@ -20,7 +20,7 @@ using ICSharpCode.SharpZipLib.Zip;
 using OdinSdk.eTaxBill.Net.Mime;
 using OdinSdk.eTaxBill.Security.Encrypt;
 
-namespace OpenETaxBill.Engine.Mailer
+namespace OpenTax.Engine.Mailer
 {
     /// <summary>
     /// 
@@ -45,37 +45,37 @@ namespace OpenETaxBill.Engine.Mailer
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IMailer m_imailer = null;
-        private OpenETaxBill.Channel.Interface.IMailer IMailer
+        private OpenTax.Channel.Interface.IMailer m_imailer = null;
+        private OpenTax.Channel.Interface.IMailer IMailer
         {
             get
             {
                 if (m_imailer == null)
-                    m_imailer = new OpenETaxBill.Channel.Interface.IMailer();
+                    m_imailer = new OpenTax.Channel.Interface.IMailer();
 
                 return m_imailer;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(IMailer.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(IMailer.Manager);
 
                 return m_appHelper;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UCertHelper m_certHelper = null;
-        public OpenETaxBill.Engine.Library.UCertHelper UCertHelper
+        private OpenTax.Engine.Library.UCertHelper m_certHelper = null;
+        public OpenTax.Engine.Library.UCertHelper UCertHelper
         {
             get
             {
                 if (m_certHelper == null)
-                    m_certHelper = new OpenETaxBill.Engine.Library.UCertHelper(IMailer.Manager);
+                    m_certHelper = new OpenTax.Engine.Library.UCertHelper(IMailer.Manager);
 
                 return m_certHelper;
             }

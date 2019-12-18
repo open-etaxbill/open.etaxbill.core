@@ -14,7 +14,7 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.ServiceModel;
 
-namespace OpenETaxBill.Engine.Mailer
+namespace OpenTax.Engine.Mailer
 {
     [ServiceContract(Name = "IMailerService", Namespace = "http://www.odinsoftware.co.kr/open/etaxbill/mailer/2016/07", SessionMode = SessionMode.Allowed)]
     public interface IMailerService

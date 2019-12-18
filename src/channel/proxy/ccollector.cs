@@ -13,14 +13,7 @@ You should have received a copy of the GNU General Public License
 along with this program.If not, see<http://www.gnu.org/licenses/>.
 */
 
-using System;
-using System.Data;
-using System.Diagnostics;
-using System.ServiceModel;
-using OdinSdk.OdinLib.Configuration;
-using OdinSdk.OdinLib.Queue;
-
-namespace OpenETaxBill.Channel
+namespace OpenTax.Channel
 {
     /// <summary>
     /// 
@@ -69,17 +62,17 @@ namespace OpenETaxBill.Channel
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.ICollector m_icollector = null;
+        private OpenTax.Channel.Interface.ICollector m_icollector = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.Channel.Interface.ICollector ICollector
+        private OpenTax.Channel.Interface.ICollector ICollector
         {
             get
             {
                 if (m_icollector == null)
-                    m_icollector = new OpenETaxBill.Channel.Interface.ICollector();
+                    m_icollector = new OpenTax.Channel.Interface.ICollector();
 
                 return m_icollector;
             }
@@ -133,12 +126,12 @@ namespace OpenETaxBill.Channel
         // 
         //-------------------------------------------------------------------------------------------------------------------------
         private readonly static object SyncChannel = new object();
-        private OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfCollector.ICollectorService> m_wcf_client = null;
+        private OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfCollector.ICollectorService> m_wcf_client = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.WcfCollector.ICollectorService WcfClient
+        private OpenTax.WcfCollector.ICollectorService WcfClient
         {
             get
             {
@@ -159,7 +152,7 @@ namespace OpenETaxBill.Channel
                     {
 						ICollector.Proxy.SetClientPortSharing(WcfServiceIp);
 
-                        m_wcf_client = new OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfCollector.ICollectorService>
+                        m_wcf_client = new OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfCollector.ICollectorService>
                         (
                             this.BindingName,
                             ICollector.Proxy.ProductName, 

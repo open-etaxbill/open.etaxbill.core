@@ -16,10 +16,10 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.Diagnostics;
 using System.ServiceModel;
-using OdinSdk.OdinLib.Configuration;
-using OdinSdk.OdinLib.Queue;
+using OdinSdk.BaseLib.Configuration;
+using OdinSdk.BaseLib.Queue;
 
-namespace OpenETaxBill.Channel
+namespace OpenTax.Channel
 {
     /// <summary>
     /// 
@@ -68,17 +68,17 @@ namespace OpenETaxBill.Channel
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IProvider m_iprovider = null;
+        private OpenTax.Channel.Interface.IProvider m_iprovider = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.Channel.Interface.IProvider IProvider
+        private OpenTax.Channel.Interface.IProvider IProvider
         {
             get
             {
                 if (m_iprovider == null)
-                    m_iprovider = new OpenETaxBill.Channel.Interface.IProvider();
+                    m_iprovider = new OpenTax.Channel.Interface.IProvider();
 
                 return m_iprovider;
             }
@@ -132,12 +132,12 @@ namespace OpenETaxBill.Channel
         // 
         //-------------------------------------------------------------------------------------------------------------------------
         private readonly static object SyncChannel = new object();
-        private OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfProvider.IProviderService> m_wcf_client = null;
+        private OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfProvider.IProviderService> m_wcf_client = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.WcfProvider.IProviderService WcfClient
+        private OpenTax.WcfProvider.IProviderService WcfClient
         {
             get
             {
@@ -158,7 +158,7 @@ namespace OpenETaxBill.Channel
                     {
                         IProvider.Proxy.SetClientPortSharing(WcfServiceIp);
 
-                        m_wcf_client = new OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfProvider.IProviderService>
+                        m_wcf_client = new OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfProvider.IProviderService>
                         (
                             this.BindingName,
                             IProvider.Proxy.ProductName,

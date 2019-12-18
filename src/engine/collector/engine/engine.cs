@@ -21,15 +21,15 @@ using System.Xml;
 using ICSharpCode.SharpZipLib.Zip;
 using NpgsqlTypes;
 using OdinSdk.BaseLib.Configuration;
-using OdinSdk.BaseLib.Data.POSTGRESQL;
+using OpenTax.Engine.Library.Data.POSTGRESQL;
 using OdinSdk.eTaxBill.Security.Encrypt;
 using OdinSdk.eTaxBill.Security.Issue;
 using OdinSdk.eTaxBill.Security.Mime;
 using OdinSdk.eTaxBill.Security.Notice;
 using OdinSdk.eTaxBill.Utility;
-using OpenETaxBill.Engine.Library;
+using OpenTax.Engine.Library;
 
-namespace OpenETaxBill.Engine.Collector
+namespace OpenTax.Engine.Collector
 {
     /// <summary>
     /// 
@@ -39,60 +39,60 @@ namespace OpenETaxBill.Engine.Collector
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper LSQLHelper
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper LSQLHelper
         {
             get
             {
                 if (m_dataHelper == null)
-                    m_dataHelper = new OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper();
+                    m_dataHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper();
                 return m_dataHelper;
             }
         }
 
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper m_dltaHelper = null;
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper LDltaHelper
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper m_dltaHelper = null;
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper LDltaHelper
         {
             get
             {
                 if (m_dltaHelper == null)
-                    m_dltaHelper = new OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper();
+                    m_dltaHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper();
 
                 return m_dltaHelper;
             }
         }
 
-        private OpenETaxBill.Channel.Interface.ICollector m_icollector = null;
-        private OpenETaxBill.Channel.Interface.ICollector ICollector
+        private OpenTax.Channel.Interface.ICollector m_icollector = null;
+        private OpenTax.Channel.Interface.ICollector ICollector
         {
             get
             {
                 if (m_icollector == null)
-                    m_icollector = new OpenETaxBill.Channel.Interface.ICollector();
+                    m_icollector = new OpenTax.Channel.Interface.ICollector();
 
                 return m_icollector;
             }
         }
         
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(ICollector.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(ICollector.Manager);
 
                 return m_appHelper;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UCertHelper m_certHelper = null;
-        public OpenETaxBill.Engine.Library.UCertHelper UCertHelper
+        private OpenTax.Engine.Library.UCertHelper m_certHelper = null;
+        public OpenTax.Engine.Library.UCertHelper UCertHelper
         {
             get
             {
                 if (m_certHelper == null)
-                    m_certHelper = new OpenETaxBill.Engine.Library.UCertHelper(ICollector.Manager);
+                    m_certHelper = new OpenTax.Engine.Library.UCertHelper(ICollector.Manager);
 
                 return m_certHelper;
             }

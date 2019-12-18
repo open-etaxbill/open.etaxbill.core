@@ -22,7 +22,7 @@ using System.Threading;
 using System.Xml;
 using OdinSdk.BaseLib.Configuration;
 
-namespace OpenETaxBill.Engine.Responsor
+namespace OpenTax.Engine.Responsor
 {
     public abstract class WebListener : IDisposable
     {
@@ -132,25 +132,25 @@ namespace OpenETaxBill.Engine.Responsor
         private TcpListener tcpListener;
         private System.Threading.Thread ListenThread;
 
-        private OpenETaxBill.Channel.Interface.IResponsor m_iresponsor = null;
-        protected OpenETaxBill.Channel.Interface.IResponsor IResponsor
+        private OpenTax.Channel.Interface.IResponsor m_iresponsor = null;
+        protected OpenTax.Channel.Interface.IResponsor IResponsor
         {
             get
             {
                 if (m_iresponsor == null)
-                    m_iresponsor = new OpenETaxBill.Channel.Interface.IResponsor();
+                    m_iresponsor = new OpenTax.Channel.Interface.IResponsor();
 
                 return m_iresponsor;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        protected OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        protected OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(IResponsor.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(IResponsor.Manager);
 
                 return m_appHelper;
             }

@@ -13,36 +13,36 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 
 using System;
 using System.Messaging;
-using OdinSdk.BaseLib.Data.POSTGRESQL;
+using OpenTax.Engine.Library.Data.POSTGRESQL;
 using OdinSdk.BaseLib.Queue;
 using OdinSdk.BaseLib.Security;
 
-namespace OpenETaxBill.Engine.Provider
+namespace OpenTax.Engine.Provider
 {
     public class Host : IDisposable
     {
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IProvider m_iprovider = null;
-        private OpenETaxBill.Channel.Interface.IProvider IProvider
+        private OpenTax.Channel.Interface.IProvider m_iprovider = null;
+        private OpenTax.Channel.Interface.IProvider IProvider
         {
             get
             {
                 if (m_iprovider == null)
-                    m_iprovider = new OpenETaxBill.Channel.Interface.IProvider();
+                    m_iprovider = new OpenTax.Channel.Interface.IProvider();
 
                 return m_iprovider;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(IProvider.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(IProvider.Manager);
 
                 return m_appHelper;
             }

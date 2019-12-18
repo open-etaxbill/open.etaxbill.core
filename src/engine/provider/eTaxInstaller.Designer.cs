@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Provider
+﻿namespace OpenTax.Engine.Provider
 {
     partial class eTaxInstaller
     {
@@ -40,8 +40,8 @@
             // eTaxSVI
             // 
             eTaxSVI.Description = "ASP업체, ERP사용자가 발행한 전자세금계산서를 메일로 수신하는 서비스 입니다.";
-            eTaxSVI.DisplayName = "Open-eTaxBill Provider";
-            eTaxSVI.ServiceName = "Open-eTaxBill Provider";
+            eTaxSVI.DisplayName = "Open-OpenTax Provider";
+            eTaxSVI.ServiceName = "Open-OpenTax Provider";
             // 
             // eTaxInstaller
             // 

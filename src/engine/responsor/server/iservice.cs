@@ -14,7 +14,7 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.ServiceModel;
 
-namespace OpenETaxBill.Engine.Responsor
+namespace OpenTax.Engine.Responsor
 {
     [ServiceContract(Name = "IResponseService", Namespace = "http://www.odinsoftware.co.kr/open/etaxbill/responsor/2016/07", SessionMode = SessionMode.Allowed)]
     public interface IResponseService

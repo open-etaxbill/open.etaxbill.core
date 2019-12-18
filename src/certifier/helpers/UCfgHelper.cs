@@ -18,7 +18,7 @@ using System.Configuration;
 using System.IO;
 using OdinSdk.BaseLib.Configuration;
 
-namespace OpenETaxBill.Certifier
+namespace OpenTax.Certifier
 {
     /// <summary>
     /// 
@@ -47,13 +47,13 @@ namespace OpenETaxBill.Certifier
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        //private OpenETaxBill.Channel.Interface.ICollector m_icollector = null;
-        //private OpenETaxBill.Channel.Interface.ICollector ICollector
+        //private OpenTax.Channel.Interface.ICollector m_icollector = null;
+        //private OpenTax.Channel.Interface.ICollector ICollector
         //{
         //    get
         //    {
         //        if (m_icollector == null)
-        //            m_icollector = new OpenETaxBill.Channel.Interface.ICollector(false);
+        //            m_icollector = new OpenTax.Channel.Interface.ICollector(false);
 
         //        return m_icollector;
         //    }

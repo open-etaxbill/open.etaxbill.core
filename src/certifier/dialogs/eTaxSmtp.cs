@@ -19,7 +19,7 @@ using System.Text;
 using System.Windows.Forms;
 using OdinSdk.eTaxBill.Security.Notice;
 
-namespace OpenETaxBill.Certifier
+namespace OpenTax.Certifier
 {
     public partial class eTaxSmtp : Form
     {

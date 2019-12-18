@@ -17,7 +17,7 @@ using System.Diagnostics;
 using System.Reflection;
 using OdinSdk.BaseLib.Configuration;
 
-namespace OpenETaxBill.Engine.Reporter
+namespace OpenTax.Engine.Reporter
 {
     /// <summary>
     /// 
@@ -43,13 +43,13 @@ namespace OpenETaxBill.Engine.Reporter
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IReporter m_ireporter = null;
-        private OpenETaxBill.Channel.Interface.IReporter IReporter
+        private OpenTax.Channel.Interface.IReporter m_ireporter = null;
+        private OpenTax.Channel.Interface.IReporter IReporter
         {
             get
             {
                 if (m_ireporter == null)
-                    m_ireporter = new OpenETaxBill.Channel.Interface.IReporter();
+                    m_ireporter = new OpenTax.Channel.Interface.IReporter();
 
                 return m_ireporter;
             }

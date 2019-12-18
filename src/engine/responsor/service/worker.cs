@@ -21,7 +21,7 @@ using Microsoft.Win32;
 using OdinSdk.eTaxBill.Security.Mime;
 using OdinSdk.eTaxBill.Security.Notice;
 
-namespace OpenETaxBill.Engine.Responsor
+namespace OpenTax.Engine.Responsor
 {
     public class Worker : WebListener
     {

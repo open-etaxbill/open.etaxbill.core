@@ -16,10 +16,10 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.Diagnostics;
 using System.ServiceModel;
-using OdinSdk.OdinLib.Configuration;
-using OdinSdk.OdinLib.Queue;
+using OdinSdk.BaseLib.Configuration;
+using OdinSdk.BaseLib.Queue;
 
-namespace OpenETaxBill.Channel
+namespace OpenTax.Channel
 {
     /// <summary>
     /// 
@@ -68,17 +68,17 @@ namespace OpenETaxBill.Channel
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IReporter m_ireporter = null;
+        private OpenTax.Channel.Interface.IReporter m_ireporter = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.Channel.Interface.IReporter IReporter
+        private OpenTax.Channel.Interface.IReporter IReporter
         {
             get
             {
                 if (m_ireporter == null)
-                    m_ireporter = new OpenETaxBill.Channel.Interface.IReporter();
+                    m_ireporter = new OpenTax.Channel.Interface.IReporter();
 
                 return m_ireporter;
             }
@@ -132,12 +132,12 @@ namespace OpenETaxBill.Channel
         // 
         //-------------------------------------------------------------------------------------------------------------------------
         private readonly static object SyncChannel = new object();
-        private OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfReporter.IReportService> m_wcf_client = null;
+        private OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfReporter.IReportService> m_wcf_client = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.WcfReporter.IReportService WcfClient
+        private OpenTax.WcfReporter.IReportService WcfClient
         {
             get
             {
@@ -158,7 +158,7 @@ namespace OpenETaxBill.Channel
                     {
 						IReporter.Proxy.SetClientPortSharing(WcfServiceIp);
 
-                        m_wcf_client = new OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfReporter.IReportService>(
+                        m_wcf_client = new OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfReporter.IReportService>(
                             this.BindingName,
                             IReporter.Proxy.ProductName, 
                             WcfServiceIp, 

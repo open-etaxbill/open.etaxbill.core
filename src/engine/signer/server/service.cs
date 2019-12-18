@@ -14,11 +14,11 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.ServiceModel;
 using NpgsqlTypes;
-using OdinSdk.BaseLib.Data.POSTGRESQL;
+using OpenTax.Engine.Library.Data.POSTGRESQL;
 using OdinSdk.eTaxBill.Security.Signature;
-using OpenETaxBill.Engine.Library;
+using OpenTax.Engine.Library;
 
-namespace OpenETaxBill.Engine.Signer
+namespace OpenTax.Engine.Signer
 {
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerSession, IncludeExceptionDetailInFaults=true)]
     public class SignService : ISignerService, IDisposable
@@ -26,60 +26,60 @@ namespace OpenETaxBill.Engine.Signer
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.ISigner m_iSigner = null;
-        private OpenETaxBill.Channel.Interface.ISigner ISigner
+        private OpenTax.Channel.Interface.ISigner m_iSigner = null;
+        private OpenTax.Channel.Interface.ISigner ISigner
         {
             get
             {
                 if (m_iSigner == null)
-                    m_iSigner = new OpenETaxBill.Channel.Interface.ISigner();
+                    m_iSigner = new OpenTax.Channel.Interface.ISigner();
 
                 return m_iSigner;
             }
         }
         
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(ISigner.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(ISigner.Manager);
 
                 return m_appHelper;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UCertHelper m_certHelper = null;
-        public OpenETaxBill.Engine.Library.UCertHelper UCertHelper
+        private OpenTax.Engine.Library.UCertHelper m_certHelper = null;
+        public OpenTax.Engine.Library.UCertHelper UCertHelper
         {
             get
             {
                 if (m_certHelper == null)
-                    m_certHelper = new OpenETaxBill.Engine.Library.UCertHelper(ISigner.Manager);
+                    m_certHelper = new OpenTax.Engine.Library.UCertHelper(ISigner.Manager);
 
                 return m_certHelper;
             }
         }
 
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper LSQLHelper
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper LSQLHelper
         {
             get
             {
                 if (m_dataHelper == null)
-                    m_dataHelper = new OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper();
+                    m_dataHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper();
                 return m_dataHelper;
             }
         }
 
-        private OpenETaxBill.Engine.Signer.Engine m_eSigner = null;
-        private OpenETaxBill.Engine.Signer.Engine ESigner
+        private OpenTax.Engine.Signer.Engine m_eSigner = null;
+        private OpenTax.Engine.Signer.Engine ESigner
         {
             get
             {
                 if (m_eSigner == null)
-                    m_eSigner = new OpenETaxBill.Engine.Signer.Engine();
+                    m_eSigner = new OpenTax.Engine.Signer.Engine();
 
                 return m_eSigner;
             }

@@ -14,7 +14,7 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.ServiceModel;
 
-namespace OpenETaxBill.Engine.Provider
+namespace OpenTax.Engine.Provider
 {
     [ServiceContract(Name = "IProviderService", Namespace = "http://www.odinsoftware.co.kr/open/etaxbill/provider/2016/07", SessionMode = SessionMode.Allowed)]
     public interface IProviderService

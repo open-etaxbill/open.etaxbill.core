@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Provider
+﻿namespace OpenTax.Engine.Provider
 {
     partial class eTaxProvider
     {
@@ -32,7 +32,7 @@
             // eTaxProvider
             // 
             AutoLog = false;
-            ServiceName = "Open-eTaxBill Provider";
+            ServiceName = "Open-OpenTax Provider";
 
         }
 

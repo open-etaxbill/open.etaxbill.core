@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenETaxBill.WcfSigner {
+namespace OpenTax.WcfSigner {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -57,12 +57,12 @@ namespace OpenETaxBill.WcfSigner {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISignerServiceChannel : OpenETaxBill.WcfSigner.ISignerService, System.ServiceModel.IClientChannel {
+    public interface ISignerServiceChannel : OpenTax.WcfSigner.ISignerService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SignerServiceClient : System.ServiceModel.ClientBase<OpenETaxBill.WcfSigner.ISignerService>, OpenETaxBill.WcfSigner.ISignerService {
+    public partial class SignerServiceClient : System.ServiceModel.ClientBase<OpenTax.WcfSigner.ISignerService>, OpenTax.WcfSigner.ISignerService {
         
         public SignerServiceClient() {
         }

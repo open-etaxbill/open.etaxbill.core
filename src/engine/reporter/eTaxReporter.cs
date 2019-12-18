@@ -1,6 +1,6 @@
 ﻿using System.ServiceProcess;
 
-namespace OpenETaxBill.Engine.Reporter
+namespace OpenTax.Engine.Reporter
 {
     public partial class eTaxReporter : ServiceBase
     {
@@ -15,25 +15,25 @@ namespace OpenETaxBill.Engine.Reporter
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Engine.Reporter.Worker m_reportWorker = null;
-        private OpenETaxBill.Engine.Reporter.Worker ReportWorker
+        private OpenTax.Engine.Reporter.Worker m_reportWorker = null;
+        private OpenTax.Engine.Reporter.Worker ReportWorker
         {
             get
             {
                 if (m_reportWorker == null)
-                    m_reportWorker = new OpenETaxBill.Engine.Reporter.Worker();
+                    m_reportWorker = new OpenTax.Engine.Reporter.Worker();
 
                 return m_reportWorker;
             }
         }
 
-        private OpenETaxBill.Engine.Reporter.Host m_reportHoster = null;
-        private OpenETaxBill.Engine.Reporter.Host ReportHoster
+        private OpenTax.Engine.Reporter.Host m_reportHoster = null;
+        private OpenTax.Engine.Reporter.Host ReportHoster
         {
             get
             {
                 if (m_reportHoster == null)
-                    m_reportHoster = new OpenETaxBill.Engine.Reporter.Host();
+                    m_reportHoster = new OpenTax.Engine.Reporter.Host();
 
                 return m_reportHoster;
             }

@@ -23,7 +23,7 @@ using System.Xml;
 using OdinSdk.eTaxBill.Security.Issue;
 using OdinSdk.eTaxBill.Security.Signature;
 
-namespace OpenETaxBill.Certifier
+namespace OpenTax.Certifier
 {
     public partial class eTaxSigning : Form
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenETaxBill.WcfMailer {
+namespace OpenTax.WcfMailer {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -67,12 +67,12 @@ namespace OpenETaxBill.WcfMailer {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IMailerServiceChannel : OpenETaxBill.WcfMailer.IMailerService, System.ServiceModel.IClientChannel {
+    public interface IMailerServiceChannel : OpenTax.WcfMailer.IMailerService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class MailerServiceClient : System.ServiceModel.ClientBase<OpenETaxBill.WcfMailer.IMailerService>, OpenETaxBill.WcfMailer.IMailerService {
+    public partial class MailerServiceClient : System.ServiceModel.ClientBase<OpenTax.WcfMailer.IMailerService>, OpenTax.WcfMailer.IMailerService {
         
         public MailerServiceClient() {
         }

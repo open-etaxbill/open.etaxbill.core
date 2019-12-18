@@ -15,7 +15,7 @@ using System;
 using System.Diagnostics;
 using OdinSdk.BaseLib.Configuration;
 
-namespace OpenETaxBill.Engine.Collector
+namespace OpenTax.Engine.Collector
 {
     /// <summary>
     /// 
@@ -41,13 +41,13 @@ namespace OpenETaxBill.Engine.Collector
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.ICollector m_icollector = null;
-        private OpenETaxBill.Channel.Interface.ICollector ICollector
+        private OpenTax.Channel.Interface.ICollector m_icollector = null;
+        private OpenTax.Channel.Interface.ICollector ICollector
         {
             get
             {
                 if (m_icollector == null)
-                    m_icollector = new OpenETaxBill.Channel.Interface.ICollector();
+                    m_icollector = new OpenTax.Channel.Interface.ICollector();
 
                 return m_icollector;
             }

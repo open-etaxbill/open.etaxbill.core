@@ -16,7 +16,7 @@ using System.Configuration;
 using System.Net.Mail;
 using OdinSdk.BaseLib.Configuration;
 
-namespace OpenETaxBill.Engine.Signer
+namespace OpenTax.Engine.Signer
 {
     /// <summary>
     /// 
@@ -42,25 +42,25 @@ namespace OpenETaxBill.Engine.Signer
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.ISigner m_isigner = null;
-        private OpenETaxBill.Channel.Interface.ISigner ISigner
+        private OpenTax.Channel.Interface.ISigner m_isigner = null;
+        private OpenTax.Channel.Interface.ISigner ISigner
         {
             get
             {
                 if (m_isigner == null)
-                    m_isigner = new OpenETaxBill.Channel.Interface.ISigner();
+                    m_isigner = new OpenTax.Channel.Interface.ISigner();
 
                 return m_isigner;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(ISigner.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(ISigner.Manager);
 
                 return m_appHelper;
             }

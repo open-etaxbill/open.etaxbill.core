@@ -14,7 +14,7 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using OdinSdk.BaseLib.Configuration;
 
-namespace OpenETaxBill.Engine.Library
+namespace OpenTax.Engine.Library
 {
     /// <summary>
     /// 

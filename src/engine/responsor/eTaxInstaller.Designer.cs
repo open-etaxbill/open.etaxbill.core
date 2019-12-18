@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Responsor
+﻿namespace OpenTax.Engine.Responsor
 {
     partial class eTaxInstaller
     {
@@ -40,8 +40,8 @@
             // eTaxSVI
             // 
             eTaxSVI.Description = "사업자가 전자세금계산서를 국세청에 전송 후 비동기식으로 처리결과를 국세청으로 부터 수신받는 서비스 입니다.";
-            eTaxSVI.DisplayName = "Open-eTaxBill Responsor";
-            eTaxSVI.ServiceName = "Open-eTaxBill Responsor";
+            eTaxSVI.DisplayName = "Open-OpenTax Responsor";
+            eTaxSVI.ServiceName = "Open-OpenTax Responsor";
             // 
             // eTaxInstaller
             // 

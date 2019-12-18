@@ -15,10 +15,10 @@ using System;
 using System.Data;
 using NpgsqlTypes;
 using OdinSdk.BaseLib.Configuration;
-using OdinSdk.BaseLib.Data.POSTGRESQL;
+using OpenTax.Engine.Library.Data.POSTGRESQL;
 using OdinSdk.eTaxBill.Security.Issue;
 
-namespace OpenETaxBill.Engine.Mailer
+namespace OpenTax.Engine.Mailer
 {
     public class Engine : IDisposable
     {
@@ -30,48 +30,48 @@ namespace OpenETaxBill.Engine.Mailer
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IMailer m_imailer = null;
-        private OpenETaxBill.Channel.Interface.IMailer IMailer
+        private OpenTax.Channel.Interface.IMailer m_imailer = null;
+        private OpenTax.Channel.Interface.IMailer IMailer
         {
             get
             {
                 if (m_imailer == null)
-                    m_imailer = new OpenETaxBill.Channel.Interface.IMailer();
+                    m_imailer = new OpenTax.Channel.Interface.IMailer();
 
                 return m_imailer;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(IMailer.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(IMailer.Manager);
 
                 return m_appHelper;
             }
         }
 
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper LSQLHelper
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper LSQLHelper
         {
             get
             {
                 if (m_dataHelper == null)
-                    m_dataHelper = new OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper();
+                    m_dataHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper();
                 return m_dataHelper;
             }
         }
 
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper m_dltaHelper = null;
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper LDltaHelper
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper m_dltaHelper = null;
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper LDltaHelper
         {
             get
             {
                 if (m_dltaHelper == null)
-                    m_dltaHelper = new OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper();
+                    m_dltaHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper();
 
                 return m_dltaHelper;
             }

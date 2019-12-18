@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ServiceProcess;
 
-namespace OpenETaxBill.Engine.Mailer
+namespace OpenTax.Engine.Mailer
 {
     public partial class eTaxMailer : ServiceBase
     {
@@ -16,25 +16,25 @@ namespace OpenETaxBill.Engine.Mailer
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Engine.Mailer.Host m_mailHoster = null;
-        private OpenETaxBill.Engine.Mailer.Host MailHoster
+        private OpenTax.Engine.Mailer.Host m_mailHoster = null;
+        private OpenTax.Engine.Mailer.Host MailHoster
         {
             get
             {
                 if (m_mailHoster == null)
-                    m_mailHoster = new OpenETaxBill.Engine.Mailer.Host();
+                    m_mailHoster = new OpenTax.Engine.Mailer.Host();
 
                 return m_mailHoster;
             }
         }
 
-        private OpenETaxBill.Engine.Mailer.Worker m_mailWorker = null;
-        private OpenETaxBill.Engine.Mailer.Worker MailWorker
+        private OpenTax.Engine.Mailer.Worker m_mailWorker = null;
+        private OpenTax.Engine.Mailer.Worker MailWorker
         {
             get
             {
                 if (m_mailWorker == null)
-                    m_mailWorker = new OpenETaxBill.Engine.Mailer.Worker();
+                    m_mailWorker = new OpenTax.Engine.Mailer.Worker();
 
                 return m_mailWorker;
             }

@@ -16,10 +16,10 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.Diagnostics;
 using System.ServiceModel;
-using OdinSdk.OdinLib.Configuration;
-using OdinSdk.OdinLib.Queue;
+using OdinSdk.BaseLib.Configuration;
+using OdinSdk.BaseLib.Queue;
 
-namespace OpenETaxBill.Channel
+namespace OpenTax.Channel
 {
     /// <summary>
     /// 
@@ -68,17 +68,17 @@ namespace OpenETaxBill.Channel
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.ISigner m_isigner = null;
+        private OpenTax.Channel.Interface.ISigner m_isigner = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.Channel.Interface.ISigner ISigner
+        private OpenTax.Channel.Interface.ISigner ISigner
         {
             get
             {
                 if (m_isigner == null)
-                    m_isigner = new OpenETaxBill.Channel.Interface.ISigner();
+                    m_isigner = new OpenTax.Channel.Interface.ISigner();
 
                 return m_isigner;
             }
@@ -132,12 +132,12 @@ namespace OpenETaxBill.Channel
         // 
         //-------------------------------------------------------------------------------------------------------------------------
         private readonly static object SyncChannel = new object();
-        private OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfSigner.ISignerService> m_wcf_client = null;
+        private OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfSigner.ISignerService> m_wcf_client = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.WcfSigner.ISignerService WcfClient
+        private OpenTax.WcfSigner.ISignerService WcfClient
         {
             get
             {
@@ -158,7 +158,7 @@ namespace OpenETaxBill.Channel
                     {
 						ISigner.Proxy.SetClientPortSharing(WcfServiceIp);
 
-                        m_wcf_client = new OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfSigner.ISignerService>(
+                        m_wcf_client = new OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfSigner.ISignerService>(
                             this.BindingName,
                             ISigner.Proxy.ProductName, 
                             WcfServiceIp, 

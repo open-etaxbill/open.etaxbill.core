@@ -15,7 +15,7 @@ using NpgsqlTypes;
 using OdinSdk.eTaxBill.Security.Encrypt;
 using OdinSdk.eTaxBill.Security.Signature;
 using OdinSdk.eTaxBill.Utility;
-using OdinSdk.BaseLib.Data.POSTGRESQL;
+using OpenTax.Engine.Library.Data.POSTGRESQL;
 using OdinSdk.BaseLib.Queue;
 using System;
 using System.Data;
@@ -23,7 +23,7 @@ using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
-namespace OpenETaxBill.Engine.Library
+namespace OpenTax.Engine.Library
 {
     /// <summary>
     /// 
@@ -73,25 +73,25 @@ namespace OpenETaxBill.Engine.Library
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Engine.Library.UAppHelper m_svcHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper USvcHelper
+        private OpenTax.Engine.Library.UAppHelper m_svcHelper = null;
+        public OpenTax.Engine.Library.UAppHelper USvcHelper
         {
             get
             {
                 if (m_svcHelper == null)
-                    m_svcHelper = new OpenETaxBill.Engine.Library.UAppHelper(QMaster);
+                    m_svcHelper = new OpenTax.Engine.Library.UAppHelper(QMaster);
 
                 return m_svcHelper;
             }
         }
 
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper LSQLHelper
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper LSQLHelper
         {
             get
             {
                 if (m_dataHelper == null)
-                    m_dataHelper = new OdinSdk.BaseLib.Data.POSTGRESQL.PgDataHelper();
+                    m_dataHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper();
 
                 return m_dataHelper;
             }

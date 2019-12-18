@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenETaxBill.WcfResponsor {
+namespace OpenTax.WcfResponsor {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -37,12 +37,12 @@ namespace OpenETaxBill.WcfResponsor {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IResponseServiceChannel : OpenETaxBill.WcfResponsor.IResponseService, System.ServiceModel.IClientChannel {
+    public interface IResponseServiceChannel : OpenTax.WcfResponsor.IResponseService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ResponseServiceClient : System.ServiceModel.ClientBase<OpenETaxBill.WcfResponsor.IResponseService>, OpenETaxBill.WcfResponsor.IResponseService {
+    public partial class ResponseServiceClient : System.ServiceModel.ClientBase<OpenTax.WcfResponsor.IResponseService>, OpenTax.WcfResponsor.IResponseService {
         
         public ResponseServiceClient() {
         }

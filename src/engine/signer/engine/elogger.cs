@@ -16,7 +16,7 @@ using System.Diagnostics;
 using OdinSdk.BaseLib.Configuration;
 using OdinSdk.BaseLib.Logging;
 
-namespace OpenETaxBill.Engine.Signer
+namespace OpenTax.Engine.Signer
 {
     /// <summary>
     /// 
@@ -42,13 +42,13 @@ namespace OpenETaxBill.Engine.Signer
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.ISigner m_isigner = null;
-        private OpenETaxBill.Channel.Interface.ISigner ISigner
+        private OpenTax.Channel.Interface.ISigner m_isigner = null;
+        private OpenTax.Channel.Interface.ISigner ISigner
         {
             get
             {
                 if (m_isigner == null)
-                    m_isigner = new OpenETaxBill.Channel.Interface.ISigner();
+                    m_isigner = new OpenTax.Channel.Interface.ISigner();
 
                 return m_isigner;
             }

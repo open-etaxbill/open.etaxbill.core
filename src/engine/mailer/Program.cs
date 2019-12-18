@@ -17,7 +17,7 @@ using System.Reflection;
 using System.ServiceProcess;
 using System.Threading;
 
-namespace OpenETaxBill.Engine.Mailer
+namespace OpenTax.Engine.Mailer
 {
     /// <summary>
     /// 

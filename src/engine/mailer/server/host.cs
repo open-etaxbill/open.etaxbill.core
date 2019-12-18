@@ -13,11 +13,11 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 
 using System;
 using System.Messaging;
-using OdinSdk.BaseLib.Data.POSTGRESQL;
+using OpenTax.Engine.Library.Data.POSTGRESQL;
 using OdinSdk.BaseLib.Queue;
 using OdinSdk.BaseLib.Security;
 
-namespace OpenETaxBill.Engine.Mailer
+namespace OpenTax.Engine.Mailer
 {
     /// <summary>
     /// 
@@ -27,25 +27,25 @@ namespace OpenETaxBill.Engine.Mailer
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IMailer m_imailer = null;
-        private OpenETaxBill.Channel.Interface.IMailer IMailer
+        private OpenTax.Channel.Interface.IMailer m_imailer = null;
+        private OpenTax.Channel.Interface.IMailer IMailer
         {
             get
             {
                 if (m_imailer == null)
-                    m_imailer = new OpenETaxBill.Channel.Interface.IMailer();
+                    m_imailer = new OpenTax.Channel.Interface.IMailer();
 
                 return m_imailer;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(IMailer.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(IMailer.Manager);
 
                 return m_appHelper;
             }

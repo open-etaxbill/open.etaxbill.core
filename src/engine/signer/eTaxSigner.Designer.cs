@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Signer
+﻿namespace OpenTax.Engine.Signer
 {
     partial class eTaxSigner
     {
@@ -32,7 +32,7 @@
             // eTaxSigner
             // 
             AutoLog = false;
-            ServiceName = "Open-eTaxBill Signer";
+            ServiceName = "Open-OpenTax Signer";
 
         }
 

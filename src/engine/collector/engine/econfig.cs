@@ -16,7 +16,7 @@ using System.Configuration;
 using System.Net.Mail;
 using OdinSdk.BaseLib.Configuration;
 
-namespace OpenETaxBill.Engine.Collector
+namespace OpenTax.Engine.Collector
 {
     /// <summary>
     /// 
@@ -42,25 +42,25 @@ namespace OpenETaxBill.Engine.Collector
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.ICollector m_icollector = null;
-        private OpenETaxBill.Channel.Interface.ICollector ICollector
+        private OpenTax.Channel.Interface.ICollector m_icollector = null;
+        private OpenTax.Channel.Interface.ICollector ICollector
         {
             get
             {
                 if (m_icollector == null)
-                    m_icollector = new OpenETaxBill.Channel.Interface.ICollector();
+                    m_icollector = new OpenTax.Channel.Interface.ICollector();
 
                 return m_icollector;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(ICollector.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(ICollector.Manager);
 
                 return m_appHelper;
             }

@@ -14,7 +14,7 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.ServiceModel;
 
-namespace OpenETaxBill.Engine.Provider
+namespace OpenTax.Engine.Provider
 {
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerSession, IncludeExceptionDetailInFaults = true)]
     public class ProviderService : IProviderService, IDisposable
@@ -22,13 +22,13 @@ namespace OpenETaxBill.Engine.Provider
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IProvider m_iprovider = null;
-        private OpenETaxBill.Channel.Interface.IProvider IProvider
+        private OpenTax.Channel.Interface.IProvider m_iprovider = null;
+        private OpenTax.Channel.Interface.IProvider IProvider
         {
             get
             {
                 if (m_iprovider == null)
-                    m_iprovider = new OpenETaxBill.Channel.Interface.IProvider();
+                    m_iprovider = new OpenTax.Channel.Interface.IProvider();
 
                 return m_iprovider;
             }

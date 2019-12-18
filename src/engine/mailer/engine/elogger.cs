@@ -15,7 +15,7 @@ using System;
 using System.Diagnostics;
 using OdinSdk.BaseLib.Configuration;
 
-namespace OpenETaxBill.Engine.Mailer
+namespace OpenTax.Engine.Mailer
 {
     /// <summary>
     /// 
@@ -41,13 +41,13 @@ namespace OpenETaxBill.Engine.Mailer
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IMailer m_imailer = null;
-        private OpenETaxBill.Channel.Interface.IMailer IMailer
+        private OpenTax.Channel.Interface.IMailer m_imailer = null;
+        private OpenTax.Channel.Interface.IMailer IMailer
         {
             get
             {
                 if (m_imailer == null)
-                    m_imailer = new OpenETaxBill.Channel.Interface.IMailer();
+                    m_imailer = new OpenTax.Channel.Interface.IMailer();
 
                 return m_imailer;
             }

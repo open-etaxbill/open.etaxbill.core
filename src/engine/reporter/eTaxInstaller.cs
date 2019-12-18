@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Configuration.Install;
 
-namespace OpenETaxBill.Engine.Reporter
+namespace OpenTax.Engine.Reporter
 {
     [RunInstaller(true)]
     public partial class eTaxInstaller : Installer

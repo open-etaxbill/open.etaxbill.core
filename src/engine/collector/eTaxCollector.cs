@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ServiceProcess;
 
-namespace OpenETaxBill.Engine.Collector
+namespace OpenTax.Engine.Collector
 {
     public partial class eTaxCollector : ServiceBase
     {
@@ -16,25 +16,25 @@ namespace OpenETaxBill.Engine.Collector
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Engine.Collector.Worker m_collectWorker = null;
-        private OpenETaxBill.Engine.Collector.Worker CollectWorker
+        private OpenTax.Engine.Collector.Worker m_collectWorker = null;
+        private OpenTax.Engine.Collector.Worker CollectWorker
         {
             get
             {
                 if (m_collectWorker == null)
-                    m_collectWorker = new OpenETaxBill.Engine.Collector.Worker();
+                    m_collectWorker = new OpenTax.Engine.Collector.Worker();
 
                 return m_collectWorker;
             }
         }
 
-        private OpenETaxBill.Engine.Collector.Host m_collectHoster = null;
-        private OpenETaxBill.Engine.Collector.Host CollectHoster
+        private OpenTax.Engine.Collector.Host m_collectHoster = null;
+        private OpenTax.Engine.Collector.Host CollectHoster
         {
             get
             {
                 if (m_collectHoster == null)
-                    m_collectHoster = new OpenETaxBill.Engine.Collector.Host();
+                    m_collectHoster = new OpenTax.Engine.Collector.Host();
 
                 return m_collectHoster;
             }

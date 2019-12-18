@@ -21,7 +21,7 @@ using OdinSdk.eTaxBill.Net;
 using OdinSdk.eTaxBill.Net.Dns;
 using OdinSdk.eTaxBill.Net.Smtp.Client;
 
-namespace OpenETaxBill.Engine.Mailer
+namespace OpenTax.Engine.Mailer
 {
     /// <summary>
     /// SMTP Client.

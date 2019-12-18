@@ -1,4 +1,4 @@
-﻿namespace OpenETaxBill.Engine.Collector
+﻿namespace OpenTax.Engine.Collector
 {
     partial class eTaxInstaller
     {
@@ -40,8 +40,8 @@
             // eTaxSVI
             // 
             eTaxSVI.Description = "ERP/ASP등 타 시스템으로 부터 전자세금계산서를 발급할 데이터를 수집하는 서비스 입니다.";
-            eTaxSVI.DisplayName = "Open-eTaxBill Collector";
-            eTaxSVI.ServiceName = "Open-eTaxBill Collector";
+            eTaxSVI.DisplayName = "Open-OpenTax Collector";
+            eTaxSVI.ServiceName = "Open-OpenTax Collector";
             // 
             // eTaxInstaller
             // 

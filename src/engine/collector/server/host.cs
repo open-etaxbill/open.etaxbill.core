@@ -13,11 +13,11 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 
 using System;
 using System.Messaging;
-using OdinSdk.BaseLib.Data.POSTGRESQL;
+using OpenTax.Engine.Library.Data.POSTGRESQL;
 using OdinSdk.BaseLib.Queue;
 using OdinSdk.BaseLib.Security;
 
-namespace OpenETaxBill.Engine.Collector
+namespace OpenTax.Engine.Collector
 {
     /// <summary>
     /// 
@@ -27,13 +27,13 @@ namespace OpenETaxBill.Engine.Collector
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.ICollector m_icollector = null;
-        private OpenETaxBill.Channel.Interface.ICollector ICollector
+        private OpenTax.Channel.Interface.ICollector m_icollector = null;
+        private OpenTax.Channel.Interface.ICollector ICollector
         {
             get
             {
                 if (m_icollector == null)
-                    m_icollector = new OpenETaxBill.Channel.Interface.ICollector();
+                    m_icollector = new OpenTax.Channel.Interface.ICollector();
 
                 return m_icollector;
             }

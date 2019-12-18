@@ -19,7 +19,7 @@ using OdinSdk.BaseLib.Queue;
 using OdinSdk.eTaxBill.Security.Issue;
 using OdinSdk.eTaxBill.Security.Signature;
 
-namespace OpenETaxBill.Engine.Library
+namespace OpenTax.Engine.Library
 {
     /// <summary>
     /// 
@@ -69,25 +69,25 @@ namespace OpenETaxBill.Engine.Library
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(QMaster);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(QMaster);
 
                 return m_appHelper;
             }
         }
 
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper m_dltaHelper = null;
-        private OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper LDltaHelper
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper m_dltaHelper = null;
+        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper LDltaHelper
         {
             get
             {
                 if (m_dltaHelper == null)
-                    m_dltaHelper = new OdinSdk.BaseLib.Data.POSTGRESQL.PgDeltaHelper();
+                    m_dltaHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDeltaHelper();
 
                 return m_dltaHelper;
             }

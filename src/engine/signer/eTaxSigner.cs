@@ -1,6 +1,6 @@
 ﻿using System.ServiceProcess;
 
-namespace OpenETaxBill.Engine.Signer
+namespace OpenTax.Engine.Signer
 {
     public partial class eTaxSigner : ServiceBase
     {

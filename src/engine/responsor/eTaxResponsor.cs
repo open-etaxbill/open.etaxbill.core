@@ -1,6 +1,6 @@
 ﻿using System.ServiceProcess;
 
-namespace OpenETaxBill.Engine.Responsor
+namespace OpenTax.Engine.Responsor
 {
     public partial class eTaxResponsor : ServiceBase
     {
@@ -15,49 +15,49 @@ namespace OpenETaxBill.Engine.Responsor
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IResponsor m_iresponsor = null;
-        private OpenETaxBill.Channel.Interface.IResponsor IResponsor
+        private OpenTax.Channel.Interface.IResponsor m_iresponsor = null;
+        private OpenTax.Channel.Interface.IResponsor IResponsor
         {
             get
             {
                 if (m_iresponsor == null)
-                    m_iresponsor = new OpenETaxBill.Channel.Interface.IResponsor();
+                    m_iresponsor = new OpenTax.Channel.Interface.IResponsor();
 
                 return m_iresponsor;
             }
         }
 
-        private OpenETaxBill.Engine.Library.UAppHelper m_appHelper = null;
-        public OpenETaxBill.Engine.Library.UAppHelper UAppHelper
+        private OpenTax.Engine.Library.UAppHelper m_appHelper = null;
+        public OpenTax.Engine.Library.UAppHelper UAppHelper
         {
             get
             {
                 if (m_appHelper == null)
-                    m_appHelper = new OpenETaxBill.Engine.Library.UAppHelper(IResponsor.Manager);
+                    m_appHelper = new OpenTax.Engine.Library.UAppHelper(IResponsor.Manager);
 
                 return m_appHelper;
             }
         }
 
-        private OpenETaxBill.Engine.Responsor.WebListener m_responseWorker = null;
-        private OpenETaxBill.Engine.Responsor.WebListener ResponseWorker
+        private OpenTax.Engine.Responsor.WebListener m_responseWorker = null;
+        private OpenTax.Engine.Responsor.WebListener ResponseWorker
         {
             get
             {
                 if (m_responseWorker == null)
-                    m_responseWorker = new OpenETaxBill.Engine.Responsor.Worker(UAppHelper.HostAddress, UAppHelper.PortNumber, UAppHelper.WebFolder);
+                    m_responseWorker = new OpenTax.Engine.Responsor.Worker(UAppHelper.HostAddress, UAppHelper.PortNumber, UAppHelper.WebFolder);
 
                 return m_responseWorker;
             }
         }
 
-        private OpenETaxBill.Engine.Responsor.Host m_responseHoster = null;
-        private OpenETaxBill.Engine.Responsor.Host ResponseHoster
+        private OpenTax.Engine.Responsor.Host m_responseHoster = null;
+        private OpenTax.Engine.Responsor.Host ResponseHoster
         {
             get
             {
                 if (m_responseHoster == null)
-                    m_responseHoster = new OpenETaxBill.Engine.Responsor.Host();
+                    m_responseHoster = new OpenTax.Engine.Responsor.Host();
 
                 return m_responseHoster;
             }

@@ -15,10 +15,10 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 
 using System;
 using System.Diagnostics;
-using OdinSdk.OdinLib.Configuration;
-using OdinSdk.OdinLib.Queue;
+using OdinSdk.BaseLib.Configuration;
+using OdinSdk.BaseLib.Queue;
 
-namespace OpenETaxBill.Channel.Interface
+namespace OpenTax.Channel.Interface
 {
     /// <summary>
     /// CProxy에 대한 요약 설명입니다.
@@ -49,20 +49,20 @@ namespace OpenETaxBill.Channel.Interface
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OdinSdk.OdinLib.Communication.WcfProxy m_wcfProxy = null;
+        private OdinSdk.BaseLib.Communication.WcfProxy m_wcfProxy = null;
 
         /// <summary>
         /// 
         /// </summary>
-        public OdinSdk.OdinLib.Communication.WcfProxy Proxy
+        public OdinSdk.BaseLib.Communication.WcfProxy Proxy
         {
             get
             {
                 if (m_wcfProxy == null)
                 {
-                    m_wcfProxy = new OdinSdk.OdinLib.Communication.WcfProxy
+                    m_wcfProxy = new OdinSdk.BaseLib.Communication.WcfProxy
                         (
-                        "Open-eTaxBill Response Service V1.0",              // Service Description
+                        "Open-OpenTax Response Service V1.0",              // Service Description
 
                         new string[] { "net.tcp", "BasicHttpBinding" },     // Binding Names
                         "",                                                 // Ip Address
@@ -151,13 +151,13 @@ namespace OpenETaxBill.Channel.Interface
         //-------------------------------------------------------------------------------------------------------------------------
         //
         //-------------------------------------------------------------------------------------------------------------------------
-        private OdinSdk.OdinLib.Logging.QFileLog m_qfilelog = null;
-        private OdinSdk.OdinLib.Logging.QFileLog QFileLog
+        private OdinSdk.BaseLib.Logging.QFileLog m_qfilelog = null;
+        private OdinSdk.BaseLib.Logging.QFileLog QFileLog
         {
             get
             {
                 if (m_qfilelog == null)
-                    m_qfilelog = new OdinSdk.OdinLib.Logging.QFileLog();
+                    m_qfilelog = new OdinSdk.BaseLib.Logging.QFileLog();
 
                 return m_qfilelog;
             }

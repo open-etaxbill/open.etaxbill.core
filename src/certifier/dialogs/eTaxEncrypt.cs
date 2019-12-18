@@ -22,7 +22,7 @@ using System.Windows.Forms;
 using OdinSdk.eTaxBill.Security.Encrypt;
 using Org.BouncyCastle.Asn1;
 
-namespace OpenETaxBill.Certifier
+namespace OpenTax.Certifier
 {
     public partial class eTaxEncrypt : Form
     {

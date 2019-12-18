@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenETaxBill.WcfCollector {
+namespace OpenTax.WcfCollector {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -57,12 +57,12 @@ namespace OpenETaxBill.WcfCollector {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICollectorServiceChannel : OpenETaxBill.WcfCollector.ICollectorService, System.ServiceModel.IClientChannel {
+    public interface ICollectorServiceChannel : OpenTax.WcfCollector.ICollectorService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CollectorServiceClient : System.ServiceModel.ClientBase<OpenETaxBill.WcfCollector.ICollectorService>, OpenETaxBill.WcfCollector.ICollectorService {
+    public partial class CollectorServiceClient : System.ServiceModel.ClientBase<OpenTax.WcfCollector.ICollectorService>, OpenTax.WcfCollector.ICollectorService {
         
         public CollectorServiceClient() {
         }

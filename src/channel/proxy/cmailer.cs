@@ -16,10 +16,10 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.Diagnostics;
 using System.ServiceModel;
-using OdinSdk.OdinLib.Configuration;
-using OdinSdk.OdinLib.Queue;
+using OdinSdk.BaseLib.Configuration;
+using OdinSdk.BaseLib.Queue;
 
-namespace OpenETaxBill.Channel
+namespace OpenTax.Channel
 {
     /// <summary>
     /// 
@@ -68,17 +68,17 @@ namespace OpenETaxBill.Channel
         //-------------------------------------------------------------------------------------------------------------------------
         // 
         //-------------------------------------------------------------------------------------------------------------------------
-        private OpenETaxBill.Channel.Interface.IMailer m_imailer = null;
+        private OpenTax.Channel.Interface.IMailer m_imailer = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.Channel.Interface.IMailer IMailer
+        private OpenTax.Channel.Interface.IMailer IMailer
         {
             get
             {
                 if (m_imailer == null)
-                    m_imailer = new OpenETaxBill.Channel.Interface.IMailer();
+                    m_imailer = new OpenTax.Channel.Interface.IMailer();
 
                 return m_imailer;
             }
@@ -132,12 +132,12 @@ namespace OpenETaxBill.Channel
         // 
         //-------------------------------------------------------------------------------------------------------------------------
         private readonly static object SyncChannel = new object();
-        private OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfMailer.IMailerService> m_wcf_client = null;
+        private OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfMailer.IMailerService> m_wcf_client = null;
 
         /// <summary>
         /// 
         /// </summary>
-        private OpenETaxBill.WcfMailer.IMailerService WcfClient
+        private OpenTax.WcfMailer.IMailerService WcfClient
         {
             get
             {
@@ -158,7 +158,7 @@ namespace OpenETaxBill.Channel
                     {
 						IMailer.Proxy.SetClientPortSharing(WcfServiceIp);
 
-                        m_wcf_client = new OdinSdk.OdinLib.Communication.WcfClient<OpenETaxBill.WcfMailer.IMailerService>
+                        m_wcf_client = new OdinSdk.BaseLib.Communication.WcfClient<OpenTax.WcfMailer.IMailerService>
                             (
                             this.BindingName,
                             IMailer.Proxy.ProductName, 
