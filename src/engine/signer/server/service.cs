@@ -12,11 +12,6 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 */
 
 using System;
-using System.ServiceModel;
-using NpgsqlTypes;
-using OpenTax.Engine.Library.Data.POSTGRESQL;
-using OdinSdk.eTaxBill.Security.Signature;
-using OpenTax.Engine.Library;
 
 namespace OpenTax.Engine.Signer
 {

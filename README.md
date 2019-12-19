@@ -1,5 +1,7 @@
 # Open eTaxBill for .Net Core
 
+현재 .net core version으로 upgrade 중 입니다.
+
 ## Engine: 국세청 전자세금계산서 연동 서비스 엔진 
 
 처리 하는 엔진 서비스들은 총 6가지로 구성 됩니다.
