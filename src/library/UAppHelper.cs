@@ -14,8 +14,8 @@ along with this program.If not, see<http://www.gnu.org/licenses/>.
 using System;
 using System.Configuration;
 using System.IO;
-using OdinSdk.BaseLib.Configuration;
-using OdinSdk.BaseLib.Queue;
+using OdinSdk.OdinLib.Configuration;
+using OdinSdk.OdinLib.Queue;
 
 namespace OpenTax.Engine.Library
 {
@@ -181,7 +181,7 @@ namespace OpenTax.Engine.Library
             get
             {
                 if (String.IsNullOrEmpty(m_tax_invoice_submit_url) == true)
-                        m_tax_invoice_submit_url = GetAppValue("TaxInvoiceSubmitUrl", "http://webservice.esero.go.kr/services/SubmitEtaxInvoice");
+                    m_tax_invoice_submit_url = GetAppValue("TaxInvoiceSubmitUrl", "http://webservice.esero.go.kr/services/SubmitEtaxInvoice");
 
                 return m_tax_invoice_submit_url;
             }
@@ -193,7 +193,7 @@ namespace OpenTax.Engine.Library
             get
             {
                 if (String.IsNullOrEmpty(m_request_results_submit_url) == true)
-                        m_request_results_submit_url = GetAppValue("ReqResultsSubmitUrl", "http://webservice.esero.go.kr/services/RequestResults");
+                    m_request_results_submit_url = GetAppValue("ReqResultsSubmitUrl", "http://webservice.esero.go.kr/services/RequestResults");
 
                 return m_request_results_submit_url;
             }

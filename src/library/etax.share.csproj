@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.2" />
+    <PackageReference Include="RabbitMQ.Client" Version="5.1.2" />
+    <PackageReference Include="BouncyCastle.NetCore" Version="1.8.5" />
+    <PackageReference Include="System.Diagnostics.EventLog" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Messaging">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Security.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="channel\Service References\WcfCollector\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+    </None>
+    <None Update="channel\Service References\WcfMailer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+    </None>
+    <None Update="channel\Service References\WcfProvider\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+    </None>
+    <None Update="channel\Service References\WcfReporter\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+    </None>
+    <None Update="channel\Service References\WcfResponsor\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+    </None>
+    <None Update="channel\Service References\WcfSigner\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -15,8 +15,8 @@ using NpgsqlTypes;
 using OdinSdk.eTaxBill.Security.Encrypt;
 using OdinSdk.eTaxBill.Security.Signature;
 using OdinSdk.eTaxBill.Utility;
-using OpenTax.Engine.Library.Data.POSTGRESQL;
-using OdinSdk.BaseLib.Queue;
+using OdinSdk.OdinLib.Data.POSTGRESQL;
+using OdinSdk.OdinLib.Queue;
 using System;
 using System.Data;
 using System.IO;
@@ -85,13 +85,13 @@ namespace OpenTax.Engine.Library
             }
         }
 
-        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
-        private OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper LSQLHelper
+        private OdinSdk.OdinLib.Data.POSTGRESQL.PgDataHelper m_dataHelper = null;
+        private OdinSdk.OdinLib.Data.POSTGRESQL.PgDataHelper LSQLHelper
         {
             get
             {
                 if (m_dataHelper == null)
-                    m_dataHelper = new OpenTax.Engine.Library.Data.POSTGRESQL.PgDataHelper();
+                    m_dataHelper = new OdinSdk.OdinLib.Data.POSTGRESQL.PgDataHelper();
 
                 return m_dataHelper;
             }
